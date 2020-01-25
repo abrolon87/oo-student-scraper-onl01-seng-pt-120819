@@ -46,7 +46,7 @@ class Scraper
   #   :bio=> "I'm a school"
   # }
   profile[:profile_quote] = source_page.css(".profile-quote").text if source_page.css(".profile-quote")
-  profile[:bio] = profile_page.css("div.bio-content.content-holder div.description-holder p").text if profile_page.css("div.bio-content.content-holder div.description-holder p")
+  profile[:bio] = source_page.css("div.bio-content.content-holder div.description-holder p").text if source_page.css("div.bio-content.content-holder div.description-holder p")
 
   profile
 
