@@ -45,7 +45,7 @@ class Scraper
   #   :profile_quote=>"\"Forget safety. Live where you fear to live. Destroy your reputation. Be notorious.\" - Rumi",
   #   :bio=> "I'm a school"
   # }
-  profile[:profile_quote] = source_page.css(".profile-quote").text if profile_page.css(".profile-quote")
+  profile[:profile_quote] = source_page.css(".profile-quote").text if source_page.css(".profile-quote")
   profile[:bio] = profile_page.css("div.bio-content.content-holder div.description-holder p").text if profile_page.css("div.bio-content.content-holder div.description-holder p")
 
   profile
